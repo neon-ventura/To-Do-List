@@ -6,7 +6,6 @@ module.exports  = class TasksController {
 
     static async allTasks(req, res) {
         const task = await Task.findAll( { raw : true } )
-        console.log(task)
         res.render('tasks', { task })
     }
 
@@ -28,7 +27,14 @@ module.exports  = class TasksController {
     static async editTask(req, res) {
         const id = req.params.id
         const task = await Task.findOne( { where : { id : id }, raw : true  })
-        console.log(id)
         res.render('edit-task', { task } )
+    }
+
+    static async updateTask(req, res) {
+        const id = req.body.id
+        const title = req.body.title
+        const description = req.body.description
+        await Task.update( { id , title, description }, { where : { id : id } } )
+        res.redirect('/')
     }
 }
