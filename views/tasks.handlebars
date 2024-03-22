@@ -1,1 +1,41 @@
-<h1>Olá</h1>
+<header>
+    <h1>Dev To do List</h1>
+</header>
+
+<div class="section-to-do-list">
+    <div class="form-to-do-list">
+        <form action="/createTask" method="post">
+            <label for="title">Título:</label>
+            <input type="text" name="title" id="title">
+            <input type="submit" value="Criar">
+        </form>
+    </div>
+
+    <div class="section-list">
+        <div class="title-task">
+            <h2>Minhas Tasks</h2>
+        </div>
+        <div class="list">
+            {{#each task}}
+                <div class="task">
+
+                    <div class="edit-task">
+                        <a href="/edit/{{this.id}}"><i class="bi bi-pencil-square"></i></a>
+                    </div>
+
+                    <p>{{this.title}}</p>
+
+                    <div class="check-task"><i class="bi bi-check2"></i></div>
+
+                    <div class="trash-task">
+                        <form action="/deleteTask" method="post">
+                            <input type="hidden" name="id" value="{{this.id}}">
+                            <button type="submit"><i class="bi bi-trash"></i></button>
+                        </form>
+                    </div>
+
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
