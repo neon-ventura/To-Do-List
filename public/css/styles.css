@@ -5,8 +5,71 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("./images/pexels-veeterzy-114979.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+.corpo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 header h1 {
     font-family: "Orbitron", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+    text-align: center;
+    padding: 30px;
+}
+
+
+.section-to-do-list {
+    display: flex;
+    background-color: rgba(128, 128, 128, 0.135);
+    width: 500px;
+    padding: 40px;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.392);
+}
+
+.form-to-do-list{
+    padding-bottom: 30px;
+}
+
+.form-to-do-list label {
+    font-size: 1.8em;
+    font-weight: bold;
+    font-family: "Orbitron", sans-serif;
+    padding-right: 10px;
+}
+
+.form-to-do-list .title {
+    height: 1.5em;
+    width: 200px;
+    border: none;
+    outline: none;
+    font-size: 1.3em;
+    background: none;
+    border: 1px solid purple;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.form-to-do-list .submit {
+    font-size: 1.3em;
+    padding: 3px;
+    color: purple;
+    background: none;
+    border: 1px solid purple;
+    cursor: pointer;
+    border-radius: 5px;
 }
