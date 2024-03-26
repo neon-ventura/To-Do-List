@@ -66,10 +66,170 @@ header h1 {
 
 .form-to-do-list .submit {
     font-size: 1.3em;
-    padding: 3px;
+    padding: 4px;
     color: purple;
     background: none;
     border: 1px solid purple;
     cursor: pointer;
     border-radius: 5px;
+}
+
+.form-to-do-list .submit:hover {
+    background-color: rgba(128, 0, 128, 0.361);
+    color: black;
+    border: 1px solid black;
+    transition: 500ms;
+}
+
+.section-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-task h2{
+    text-align: center;
+    padding: 30px;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+.task {
+    display: flex;
+    margin: 2px;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.584);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.339);
+    transition: transform 0.3s ease;
+}
+
+.task p {
+    font-size: 1.5em;
+}
+
+.task:hover {
+    transform: scale(1.1);
+}
+
+.edit-task a i {
+    color: purple;
+    font-size: 1.5em;
+    cursor: pointer;    
+}
+
+.check-task button{
+    background: none;
+    border: none;
+}
+
+.check-task button i {
+    color: purple;
+    font-size: 2em;
+    cursor: pointer; 
+}
+
+.submit-trash {
+    background: none;
+    border: none;
+    cursor: pointer; 
+}
+
+.trash-task form .submit-trash i  {
+    color: purple;
+    font-size: 1.5em;
+
+}
+
+.green {
+    background-color: rgba(255, 255, 255, 0.145);
+}
+
+.green p {
+    text-decoration: line-through;
+}
+
+/* Section Edit */
+
+.section-edit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-edit{
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.285);
+    border-radius: 20px;
+    background-color: rgba(128, 128, 128, 0.135);
+    padding: 30px;
+}
+
+.input-edit-title {
+    margin-bottom: 20px;
+}
+
+.input-edit-title label {
+    font-size: 1.8em;
+    font-weight: bold;
+    font-family: "Orbitron", sans-serif;
+    padding-right: 74px;
+}
+
+.input-edit-title input {
+    height: 1.5em;
+    width: 200px;
+    border: none;
+    outline: none;
+    font-size: 1.3em;
+    background: none;
+    border: 1px solid purple;
+    margin-right: 10px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.input-edit-description {
+    margin-bottom: 20px;
+}
+
+.input-edit-description label {
+    font-size: 1.8em;
+    font-weight: bold;
+    font-family: "Orbitron", sans-serif;
+}
+
+.input-edit-description input {
+    height: 1.5em;
+    width: 200px;
+    border: none;
+    outline: none;
+    font-size: 1.3em;
+    background: none;
+    border: 1px solid purple;
+    margin-right: 10px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.submit-edit button{
+    font-size: 1.3em;
+    padding: 4px;
+    color: purple;
+    background: none;
+    border: 1px solid purple;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.submit-edit button:hover {
+    background-color: rgba(128, 0, 128, 0.361);
+    color: black;
+    border: 1px solid black;
+    transition: 500ms;  
 }

@@ -13,6 +13,34 @@
             </div>
             <div class="list">
                 {{#each task}}
+
+                    {{#if done}}
+                        <div class="task green">
+    
+                        <div class="edit-task">
+                            <a href="/edit/{{this.id}}"><i class="bi bi-pencil-square"></i></a>
+                        </div>
+    
+                        <p>{{this.title}}</p>
+    
+                        <div class="check-task">
+                            <form action="/doneTask" method="post">
+                                <input type="hidden" name="id" value="{{this.id}}">
+                                <input type="hidden" name="done" value="{{this.done}}">
+                                <button type="submit"><i class="bi bi-check2"></i></button>
+                            </form>
+
+                        </div>
+    
+                        <div class="trash-task">
+                            <form action="/deleteTask" method="post">
+                                <input type="hidden" name="id" value="{{this.id}}">
+                                <button type="submit" class="submit-trash"><i class="bi bi-trash"></i></button>
+                            </form>
+                        </div>
+    
+                    </div>
+                    {{else}}
                     <div class="task">
     
                         <div class="edit-task">
@@ -21,16 +49,24 @@
     
                         <p>{{this.title}}</p>
     
-                        <div class="check-task"><i class="bi bi-check2"></i></div>
+                        <div class="check-task">
+                            <form action="/doneTask" method="post">
+                                <input type="hidden" name="id" value="{{this.id}}">
+                                <input type="hidden" name="done" value="{{this.done}}">
+                                <button type="submit"><i class="bi bi-check2"></i></button>
+                            </form>
+
+                        </div>
     
                         <div class="trash-task">
                             <form action="/deleteTask" method="post">
                                 <input type="hidden" name="id" value="{{this.id}}">
-                                <button type="submit"><i class="bi bi-trash"></i></button>
+                                <button type="submit" class="submit-trash"><i class="bi bi-trash"></i></button>
                             </form>
                         </div>
     
                     </div>
+                    {{/if}}
                 {{/each}}
             </div>
         </div>

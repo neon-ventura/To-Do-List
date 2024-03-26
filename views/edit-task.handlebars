@@ -1,21 +1,23 @@
-<header>
-    <h1>Editar Task "{{task.title}}"</h1>
-</header>
-
-<div class="form-edit">
-    <form action="/updateTask" method="post">
-        <input type="hidden" name="id" value="{{task.id}}">
-        <div class="input-edit-title">
-            <label for="title">Titulo:</label>
-            <input type="text" name="title" id="title" value="{{task.title}}">
-        </div>
-        <div class="input-edit-description">
-            <label for="description">Descrição:</label>
-            <input type="text" name="description" value="{{task.description}}">
-        </div>
-        <div class="submit-edit">
-            <button type="submit">Editar</button>
-            <a href="/"><button>Voltar</button></a>
-        </div>
-    </form>
+<div class="section-edit">
+    <header>
+        <h1>Editar Task "{{task.title}}"</h1>
+    </header>
+    
+    <div class="form-edit">
+        <form action="/updateTask" method="post">
+            <input type="hidden" name="id" value="{{task.id}}">
+            <div class="input-edit-title">
+                <label for="title">Titulo:</label>
+                <input type="text" name="title" id="title" value="{{task.title}}">
+            </div>
+            <div class="input-edit-description">
+                <label for="description">Descrição:</label>
+                <input type="text" name="description" value="{{task.description}}">
+            </div>
+            <div class="submit-edit">
+                <button type="submit">Editar</button>
+                <a href="/"><button>Voltar</button></a>
+            </div>
+        </form>
+    </div>
 </div>
